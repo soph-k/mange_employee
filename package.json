@@ -1,0 +1,27 @@
+{
+  "name": "mange_employee",
+  "version": "1.0.0",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soph-k/mange_employee.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soph-k/mange_employee/issues"
+  },
+  "homepage": "https://github.com/soph-k/mange_employee#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.2"
+  },
+  "devDependencies": {}
+}
