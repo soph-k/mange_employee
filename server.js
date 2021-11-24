@@ -34,7 +34,7 @@ startQuestion = () => {
         'Update an Employees Role',
         'Delete a Department',
         'Delete a Role',
-        'Delete an Employee',
+        // 'Delete an Employee',
         'Quit'
       ]
     }
@@ -249,7 +249,9 @@ const updateEmployee = () => {
             return selectedEmployee === employee.first_name + " " + employee.last_name;
         })
           let thisEmployeeId = response[1][employeeIndexNumber].id;
-          let roleIndexNumber = response[1].findIndex((role => selectedRole === role.title));
+          let roleIndexNumber = response[1].findIndex(function(role) {
+            return selectedRole === role.title
+          });
           let roleID = response[1][roleIndexNumber].id;
           db.query(`UPDATE employee SET role_id = ? WHERE id= ?`, [roleID, thisEmployeeId], (err, response) => {
             console.log("Updated " + selectedEmployee + "'s role.")
